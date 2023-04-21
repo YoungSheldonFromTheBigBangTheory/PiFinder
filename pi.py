@@ -5,7 +5,7 @@ while True:
     try:
         d = float(d)
     except ValueError:
-        print("\nInvalid\n")
+        print("\nInvalid. Try again.\n")
         continue
 
     r = d/2
