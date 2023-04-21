@@ -7,12 +7,11 @@ while True:
         print("\nInvalid unit. Try again.\n")
         m = input("What kind of unit? in, ft, cm, m. ").casefold()
     h = "True"
-    print(h)
     d = input("Enter Diameter: ")
     try:
         d = float(d)
     except ValueError:
-        print("\nInvalid. Try again.\n")
+        print("\nInvalid Diameter. Try again.\n")
         continue
 
     r = d/2
@@ -20,7 +19,7 @@ while True:
     A = round(math.pi * (r**2), 2)
     C = round(2 * math.pi * r, 2)
 
-    print("\nThe Area is " + str(A) + str(m))
+    print("\nThe Area is " + str(A) + str(m) + str("²"))
     print("The Circumference is " + str(C) + str(m))
 
     break
