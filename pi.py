@@ -1,6 +1,13 @@
 import math
-
+h = "False"
 while True:
+    if h == "False":
+        m = input("What kind of unit? in, ft, cm, m. ").casefold()
+    while m != "in" and m != "ft" and m != "cm" and m != "m":
+        print("\nInvalid unit. Try again.\n")
+        m = input("What kind of unit? in, ft, cm, m. ").casefold()
+    h = "True"
+    print(h)
     d = input("Enter Diameter: ")
     try:
         d = float(d)
@@ -10,10 +17,10 @@ while True:
 
     r = d/2
 
-    A = math.pi * (r**2)
-    C = 2 * math.pi * r
+    A = round(math.pi * (r**2), 2)
+    C = round(2 * math.pi * r, 2)
 
-    print("The Area is " + str(A))
-    print("The Circumference is " + str(C))
+    print("\nThe Area is " + str(A) + str(m))
+    print("The Circumference is " + str(C) + str(m))
 
     break
